@@ -54,3 +54,4 @@ gem 'devise'
 gem 'coffee-script-source', '1.8.0'
 gem 'dotenv-rails', groups: [:development]
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
