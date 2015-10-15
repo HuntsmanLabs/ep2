@@ -6,13 +6,17 @@ class ConnectionsController < ApplicationController
   	if connection.save
   		redirect_to dashboard_path, notice: "Successfully connected!"
   	else
-  		redirect_to dashboard_path, notice: "Something went wrong..."
+  		redirect_to dashboard_path, notice: "Opps, something went wrong..."
   	end
   end
 
   def destroy
   	@connection.destroy
   	redirect_to dashboard_path, notice: "Connection deleted"
+  end
+
+  def omniauth_failure
+    redirect_to dashboard_path, notice: "Oops, something went wrong..."
   end
 
   private
